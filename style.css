@@ -1,0 +1,215 @@
+/*/* Default Light Theme Variables */
+:root {
+    --bg-page: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+}
+
+/* Automatic Dark Theme Variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-page: #0f172a;       /* Dark navy background */
+        --bg-card: #1e293b;       /* Slightly lighter card */
+        --text-main: #f8fafc;     /* White text */
+        --text-muted: #94a3b8;    /* Light grey text */
+        --border-color: #334155;  /* Dark border */
+    }
+} Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+   background-color: var(--bg-page); 
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #dc2626; /* Emergency Red */
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid #991b1b;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Main Container */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Quick Navigation Links */
+.quick-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.quick-links .badge {
+    background-color: #e2e8f0;
+    color: #334155;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.quick-links .badge:hover {
+    background-color: #cbd5e1;
+}
+
+/* Section Titles */
+.section-title {
+    margin: 2rem 0 1rem 0;
+    color: #334155;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+/* The Grid Layout */
+/* Forces the cards into a strict, unbreakable grid */
+.grid {
+    display: grid;
+    
+    /* THE FIX: Changed 'auto-fit' to 'auto-fill' */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    
+    gap: 1.5rem;
+    align-items: start; 
+    margin-bottom: 3rem; 
+}
+
+/* Hard-locks your headings so they always stay on their own line */
+.section-title {
+    width: 100%;
+    display: block;
+    clear: both; /* Prevents anything from floating next to the heading */
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* The Donor Card */
+.card {
+   background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Blood Group Badge */
+.blood-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: #fee2e2;
+    color: #b91c1c;
+    font-weight: 800;
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    font-size: 1rem;
+}
+
+.blood-badge.b-neg {
+    background: #e0e7ff; /* Different color for rare blood types */
+    color: #4338ca;
+}
+
+/* Typography & Visual Hierarchy */
+.card h3 {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    margin-right: 3rem;
+}
+
+.location {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* STYLING THE CLICKABLE LINK */
+.contact a {
+    text-decoration: none; /* Removes the underline */
+    color: #0284c7;        /* Professional trusted blue */
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+.contact a:hover {
+    color: #0369a1;
+}
+
+/* Availability Status */
+.status {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f1f5f9; /* Subtle divider line */
+}
+
+.status.available {
+    color: #16a34a;
+}
+
+.status.cooldown {
+    color: #dc2626;
+}
+/* Styling the Google Maps location links */
+.location a {
+    color: #64748b; /* Keeps it the same grey color */
+    text-decoration: none; /* Removes the default underline */
+    transition: all 0.2s;
+}
+
+/* Adds a visual cue when the user's mouse touches the link */
+.location a:hover {
+    color: #d6dc26; /* Changes to emergency red */
+    text-decoration: underline; /* Adds the underline back on hover */
+}
+.profile-pic {
+    width: 50px;           /* This controls how wide the RS box is */
+    height: 50px;          /* This controls how tall the RS box is */
+    border-radius: 50%;    /* This is the magic line that turns the square into a circle */
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 2px solid var(--border-color);
+}
+/* The Kolkata Region Badge */
+.region-badge {
+    display: inline-block;
+    background-color: #fee2e2;
+    color: #b91c1c;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}

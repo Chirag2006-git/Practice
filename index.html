@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Blood Donor Directory</title>
+    <!-- This line links your HTML to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+        <div class="hero-content">
+            <!-- PASTE THE BADGE RIGHT HERE -->
+            <span class="region-badge">📍 Kolkata </span>
+            
+            <h1>Emergency Blood Directory</h1>
+            <p>Direct, instant access to local donors. No middlemen.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Visual Anchor Links for quick navigation -->
+        <div class="quick-links">
+            <a href="#o-positive" class="badge">O+ Donors</a>
+            <a href="#b-negative" class="badge">B- Donors</a>
+            <a href="#a-positive" class="badge">A+ Donors</a>
+        </div>
+<h2 id="o-positive" class="section-title" style="color: white; font-family: sans-serif; font-weight: bold;">Blood Group: O+</h2>
+        <div class="grid">
+            <!-- Donor Card 1 -->
+            <div class="card">
+                <!-- Rahul's Profile Photo -->
+                <img src="https://ui-avatars.com/api/?name=Rahul+Sharma&background=0284c7&color=fff&size=100" alt="Rahul Sen Profile" class="profile-pic">
+                
+                <span class="blood-badge">O+</span>
+                <h3>Rahul Sen</h3>
+                <p class="location">
+                    📍 <a href="https://maps.google.com/?q=Salt+Lake+Sector+5,+Kolkata" target="_blank" rel="noopener">Salt Lake, Sector 5</a>
+                </p>
+                <p class="contact">
+                    <a href="tel:+919876500001">📞 +91 98765 00001</a>
+                </p>
+                <span class="status available">🟢 Available to Donate</span>
+
+                <!-- Rahul's Donation History -->
+                <details class="donor-history">
+                    <summary>View Donation History</summary>
+                    <ul>
+                        <li>🩸 AMRI Hospital (Nov 2025)</li>
+                        <li>🩸 Govt. Blood Camp (May 2025)</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Donor Card 2 -->
+            <div class="card">
+                <!-- Ayesha's Profile Photo (Generates an AK box) -->
+                <img src="https://ui-avatars.com/api/?name=Ayesha+Khan&background=ef4444&color=fff&size=100" alt="Ayesha Khan Profile" class="profile-pic">
+                
+                <span class="blood-badge">O+</span>
+                <h3>Ayesha Khan</h3>
+                <p class="location">
+                    📍 <a href="https://maps.google.com/?q=Jadavpur,+Kolkata" target="_blank" rel="noopener">Jadavpur</a>
+                </p>
+                <p class="contact">
+                    <a href="tel:+919876500002">📞 +91 98765 00002</a>
+                </p>
+                <span class="status available">🟢 Available to Donate</span>
+                
+                <details class="donor-history">
+                    <summary>View Donation History</summary>
+                    <ul>
+                        <li>🩸 Manipal Hospital (Nov 2025)</li>
+                        <li>🩸 Apollo Hospital (May 2026)</li>
+                    </ul>
+                </details>
+            </div>
+
+        </div> <!-- 🚨 THIS IS THE MISSING DIV THAT CLOSES THE O+ GRID 🚨 -->
+
+        <h2 id="b-negative" class="section-title" style="color: white; font-family: sans-serif; font-weight: bold;">Blood Group: B-</h2>
+        <div class="grid">
+            <!-- Donor Card 3 -->
+            <div class="card">
+                <!-- Vikram's Profile Photo (Generates a VS box) -->
+                <img src="https://ui-avatars.com/api/?name=Vikram+Singh&background=ca8a04&color=fff&size=100" alt="Vikram Singh Profile" class="profile-pic">
+                
+                <span class="blood-badge b-neg">B-</span>
+                <h3>Vikram Singh</h3>
+                <p class="location">
+                    📍 <a href="https://maps.google.com/?q=New+Town,+Kolkata" target="_blank" rel="noopener">New Town</a>
+                </p>
+                <p class="contact">
+                    <a href="tel:+919876500003">📞 +91 98765 00003</a>
+                </p>
+                <span class="status cooldown">🔴 Donated Recently (Cooldown)</span>
+                
+                <details class="donor-history">
+                    <summary>View Donation History</summary>
+                    <ul>
+                        <li>🩸 AMRI Hospital (June 2025)</li>
+                        <li>🩸 Apollo Hospital (Jan 2026)</li>
+                    </ul>
+                </details>
+            </div>
+        </div> <!-- This closes the B- grid -->
+        <!-- === SECTION 3: A POSITIVE === -->
+        <h2 id="a-positive" class="section-title" style="color: white; font-family: sans-serif; font-weight: bold;">Blood Group: A+</h2>
+        <div class="grid">
+            
+            <!-- Donor Card 4 -->
+            <div class="card">
+                <!-- Anirban's Profile Photo -->
+                <img src="https://ui-avatars.com/api/?name=Anirban+Mukherjee&background=10b981&color=fff&size=100" alt="Anirban Mukherjee Profile" class="profile-pic">
+                
+                <span class="blood-badge">A+</span>
+                <h3>Anirban Mukherjee</h3>
+                <p class="location">
+                    📍 <a href="https://maps.google.com/?q=Park+Street,+Kolkata" target="_blank" rel="noopener">Park Street</a>
+                </p>
+                <p class="contact">
+                    <a href="tel:+919876500004">📞 +91 98765 00004</a>
+                </p>
+                <span class="status available">🟢 Available to Donate</span>
+
+                <details class="donor-history">
+                    <summary>View Donation History</summary>
+                    <ul>
+                        <li>🩸 Belle Vue Clinic (Mar 2026)</li>
+                        <li>🩸 Medica Superspecialty (Sep 2025)</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Donor Card 5 -->
+            <div class="card">
+                <!-- Debolina's Profile Photo -->
+                <img src="https://ui-avatars.com/api/?name=Debolina+Banerjee&background=8b5cf6&color=fff&size=100" alt="Debolina Banerjee Profile" class="profile-pic">
+                
+                <span class="blood-badge">A+</span>
+                <h3>Debolina Banerjee</h3>
+                <p class="location">
+                    📍 <a href="https://maps.google.com/?q=Ballygunge,+Kolkata" target="_blank" rel="noopener">Ballygunge</a>
+                </p>
+                <p class="contact">
+                    <a href="tel:+919876500005">📞 +91 98765 00005</a>
+                </p>
+                <span class="status available">🟢 Available to Donate</span>
+                
+                <details class="donor-history">
+                    <summary>View Donation History</summary>
+                    <ul>
+                        <li>🩸 Fortis Hospital (Feb 2026)</li>
+                        <li>🩸 Peerless Hospital (Oct 2025)</li>
+                    </ul>
+                </details>
+            </div>
+
+        </div> <!-- This closes the A+ grid -->
+
+    </main>
+</body>
+</html>
